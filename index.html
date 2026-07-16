@@ -140,6 +140,15 @@ footer .fm{font-family:"Fraunces",serif;color:#fff;font-weight:600;font-size:1.1
 footer .fx{font-size:.82rem;line-height:1.9;margin-top:8px}footer .fx b{color:var(--gold-2)}
 footer a{color:var(--on-deep-mut);text-decoration:none}footer a:hover{color:var(--gold-2)}
 footer .ai{font-size:.72rem;opacity:.7;margin-top:20px;max-width:62ch}
+.datab{background:var(--deep2);color:var(--on-deep)}
+.datab .head h2{color:#fff}.datab .head h2 em{font-style:italic;color:var(--gold-3)}
+.datab .eyebrow{color:var(--gold-3)}.datab .eyebrow::before{background:var(--gold-3)}
+.datab .dstats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(216,179,104,.28);border-left:1px solid rgba(216,179,104,.28)}
+@media(max-width:760px){.datab .dstats{grid-template-columns:1fr}}
+.datab .d{padding:26px;border-right:1px solid rgba(216,179,104,.28);border-bottom:1px solid rgba(216,179,104,.28)}
+.datab .d .n{font-family:"Fraunces",serif;font-weight:600;font-size:2.7rem;color:var(--gold-3);line-height:1}
+.datab .d .l{font-size:.9rem;color:var(--on-deep-mut);margin-top:10px}
+.datab .src{font-size:.74rem;color:var(--on-deep-mut);margin-top:22px}
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}.reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
 </style>
@@ -208,6 +217,16 @@ footer .ai{font-size:.72rem;opacity:.7;margin-top:20px;max-width:62ch}
       <div class="stat"><div class="n">1221</div><div class="l">Brickell Ave, Miami</div></div>
     </div>
   </div></section>
+
+  <section class="datab reveal"><div class="wrap">
+  <div class="head"><span class="eyebrow">The gap, in numbers</span><h2>This isn't opinion. It's the <em>data.</em></h2></div>
+  <div class="dstats">
+    <div class="d"><div class="n">39%</div><div class="l">of Black-owned businesses are denied a loan &mdash; vs 18% of white-owned firms with comparable credit.</div></div>
+    <div class="d"><div class="n">8&times;</div><div class="l">the racial wealth gap &mdash; ~$188K median white household wealth vs ~$24K Black.</div></div>
+    <div class="d"><div class="n">25/50</div><div class="l">states require personal finance in school &mdash; the ones that skip it serve mostly Black &amp; brown students.</div></div>
+  </div>
+  <div class="src">Sources: Federal Reserve Small Business Credit Survey &middot; U.S. Census &middot; Hechinger Report / K-12 Dive.</div>
+</div></section>
 
   <section id="services" class="reveal"><div class="wrap">
     <div class="head"><span class="eyebrow">What we do</span><h2>The Big Four menu — <em>translated</em> for the next generation.</h2><p class="lede">Same expertise the giants sell to the Fortune 500. No jargon, no gatekeeping.</p></div>
