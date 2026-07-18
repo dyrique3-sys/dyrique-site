@@ -162,6 +162,12 @@ main{padding:clamp(64px,9vw,120px) 0}
 .manifesto .mrule{display:block;width:64px;height:2px;background:var(--gold-2);margin-bottom:30px}
 .manifesto p{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(1.7rem,1.1rem+2.4vw,3rem);line-height:1.16;color:#fff;max-width:22ch;letter-spacing:-.01em}
 .manifesto .msig{margin-top:30px;font-family:'Geist',sans-serif;font-size:.85rem;color:var(--on-deep-mut);letter-spacing:.02em}
+.insfeat{display:block;border:1px solid var(--line);border-left:3px solid var(--gold);background:var(--surface);padding:clamp(28px,4vw,46px);margin:6px 0 46px;text-decoration:none;transition:transform .3s ease,box-shadow .3s ease}
+.insfeat:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(8,24,43,.14)}
+.insfeat .pn{font-family:'Geist',sans-serif;color:var(--muted);font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.09em}
+.insfeat h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.7rem,1.2rem+1.9vw,2.7rem);color:var(--ink);line-height:1.08;margin:12px 0;max-width:22ch}
+.insfeat p{font-size:1.12rem;color:var(--muted);max-width:62ch;line-height:1.55;margin-bottom:16px}
+.insfeat .pmore{font-size:.85rem;color:var(--gold);font-weight:600}
 .imgmark::before{content:"DM";position:absolute;top:0;left:0;padding:6px 11px;background:var(--gold-2);color:#0A1627;font-family:'Fraunces',serif;font-weight:600;font-size:.72rem;letter-spacing:.03em;line-height:1;z-index:3}
 .pband{position:relative;overflow:hidden;margin:38px 0;aspect-ratio:16/7;max-height:440px}
 .pband img{width:100%;height:100%;object-fit:cover;filter:saturate(.85) contrast(1.07) brightness(1.01)}
