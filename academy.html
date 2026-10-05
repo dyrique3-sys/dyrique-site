@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Academy — The Billionaires Club | Dyrique Mendoza LLC</title>
+<meta name="description" content="The campus of The Billionaires Club. Ten rungs from the block to board rooms — a real value ladder, live weekly sessions, and graduation at the end." />
+<meta name="theme-color" content="#08182B" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --midnight:#08182B; --navy:#12294A; --navy-2:#1b3659;
+    --gold:#C6A15B; --gold-bright:#E7B23E; --cream:#F4EFE6; --cream-2:#FBF9F4;
+    --ink:#0d1b2a; --muted:#5f7183;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Manrope',sans-serif;color:var(--ink);background:var(--cream-2);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,.disp{font-family:'Fraunces',serif;font-weight:500;letter-spacing:-.01em}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+  .eyebrow{font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.16,1,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  .bar{background:var(--midnight);color:#fff;text-align:center;padding:9px 16px;font-size:.74rem;letter-spacing:.08em;position:sticky;top:0;z-index:50}
+  .bar b{color:var(--gold-bright);font-weight:700}
+
+  /* hero */
+  .hero{position:relative;background:linear-gradient(rgba(8,24,43,.84),rgba(8,24,43,.93)),url('bc-img/crew.jpg') center 28%/cover;color:#fff;text-align:center;padding:76px 0 84px}
+  .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 15%,rgba(231,178,62,.15),transparent 55%);pointer-events:none}
+  .hero .wrap{position:relative;z-index:2}
+  .crest{font-family:'Fraunces',serif;font-weight:600;font-size:1rem;letter-spacing:.3em;color:var(--gold);border:1px solid rgba(198,161,91,.45);display:inline-block;padding:9px 20px;margin-bottom:24px}
+  .hero h1{font-size:clamp(2.6rem,7vw,4.8rem);line-height:1.02;margin:6px 0 12px;color:#fff}
+  .hero h1 i{color:var(--gold-bright);font-weight:500}
+  .hero p{font-size:1.12rem;font-weight:300;color:rgba(255,255,255,.86);max-width:46ch;margin:0 auto}
+
+  section.block{padding:84px 0}
+  .sec-head{text-align:center;max-width:640px;margin:0 auto 54px}
+  .sec-head h2{font-size:clamp(2rem,4.5vw,3.2rem);color:var(--navy);margin:12px 0}
+  .sec-head h2 i{color:var(--gold);font-weight:500}
+  .sec-head p{color:var(--muted);font-weight:300;font-size:1.05rem}
+  .rule{width:48px;height:2px;background:var(--gold);margin:0 auto}
+
+  /* VALUE LADDER */
+  .ladder-wrap{background:var(--midnight);color:#fff}
+  .ladder-wrap .sec-head h2{color:#fff}
+  .ladder-wrap .sec-head p{color:rgba(255,255,255,.72)}
+  .ladder{max-width:760px;margin:0 auto;position:relative;padding-left:20px}
+  .ladder::before{content:"";position:absolute;left:33px;top:14px;bottom:60px;width:2px;background:linear-gradient(var(--gold),rgba(198,161,91,.25))}
+  .rung{position:relative;display:flex;gap:24px;align-items:flex-start;padding:16px 0 20px;}
+  .rung .node{min-width:30px;height:30px;border-radius:50%;background:var(--navy);border:2px solid var(--gold);color:var(--gold-bright);font-family:'Fraunces',serif;font-size:.95rem;display:flex;align-items:center;justify-content:center;position:relative;z-index:2;margin-left:0}
+  .rung .r-body{flex:1;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:16px}
+  .rung h4{font-family:'Manrope';font-weight:700;font-size:1.12rem;color:#fff;margin-bottom:2px}
+  .rung p{font-size:.9rem;color:rgba(255,255,255,.62);font-weight:300}
+  .rung .build{display:inline-block;margin-top:7px;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .rung .build::before{content:"▸ builds: ";color:rgba(198,161,91,.6)}
+  /* summit */
+  .summit{position:relative;display:flex;gap:24px;align-items:flex-start;margin-top:6px}
+  .summit .node{min-width:30px;height:30px;border-radius:50%;background:var(--gold-bright);color:var(--midnight);display:flex;align-items:center;justify-content:center;font-size:1rem;z-index:2}
+  .summit .s-body{flex:1;background:linear-gradient(135deg,var(--navy),var(--navy-2));border:1px solid var(--gold);padding:24px 26px}
+  .summit h3{font-family:'Fraunces',serif;color:var(--gold-bright);font-size:1.5rem;margin-bottom:4px}
+  .summit p{color:rgba(255,255,255,.82);font-weight:300;font-size:.95rem}
+
+  /* how it works */
+  .how{background:var(--cream)}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{background:#fff;border:1px solid rgba(18,41,74,.08);padding:30px 24px}
+  .card .ic{font-size:1.6rem;color:var(--gold)}
+  .card h3{font-size:1.25rem;color:var(--navy);margin:12px 0 6px}
+  .card p{font-size:.92rem;color:var(--muted);font-weight:300}
+
+  /* graduation */
+  .grad{position:relative;background:linear-gradient(rgba(8,24,43,.88),rgba(8,24,43,.93)),url('bc-img/together.jpg') center/cover;color:#fff;text-align:center}
+  .grad .sec-head h2{color:#fff}
+  .grad .payoff{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;max-width:900px;margin:10px auto 0}
+  .grad .p{background:rgba(255,255,255,.05);border:1px solid rgba(198,161,91,.3);padding:20px 12px;text-align:center}
+  .grad .p .pi{font-size:1.4rem}
+  .grad .p div.t{font-size:.82rem;color:#fff;font-weight:600;margin-top:8px;line-height:1.3}
+  @media(max-width:720px){ .grad .payoff{grid-template-columns:1fr 1fr} .cards{grid-template-columns:1fr} }
+
+  /* closing */
+  .closing{background:var(--navy);color:#fff;text-align:center;padding:80px 0}
+  .closing h2{font-size:clamp(2rem,4.5vw,3rem);margin-bottom:14px}
+  .closing h2 i{color:var(--gold-bright);font-weight:500}
+  .closing p{color:rgba(255,255,255,.78);font-weight:300;max-width:44ch;margin:0 auto 26px}
+  .btn{display:inline-block;background:var(--gold-bright);color:var(--midnight);text-decoration:none;padding:15px 38px;font-weight:700;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;transition:.3s}
+  .btn:hover{background:#fff}
+
+  footer{background:var(--midnight);color:rgba(255,255,255,.55);text-align:center;padding:42px 0;font-size:.82rem;font-weight:300}
+  footer .crest2{font-family:'Fraunces',serif;color:#fff;font-size:1.2rem;letter-spacing:.2em;margin-bottom:8px}
+  footer .fine{font-size:.66rem;opacity:.5;max-width:60ch;margin:14px auto 0;line-height:1.6}
+</style>
+</head>
+<body>
+
+<div class="bar">🎓 THE BILLIONAIRES CLUB &nbsp;·&nbsp; <b>The Academy</b></div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="crest">THE ACADEMY</div>
+    <h1>Welcome to <i>the climb.</i></h1>
+    <p>This is your campus for the semester. Ten rungs from the block to board rooms — and at the top, you don't leave a student. You leave an owner.</p>
+  </div>
+</header>
+
+<!-- VALUE LADDER -->
+<section class="block ladder-wrap">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="rule"></div>
+      <span class="eyebrow" style="display:block;margin-top:18px">The Value Ladder</span>
+      <h2>Ten rungs. <i>Block to board rooms.</i></h2>
+      <p>Every rung you climb, you build a real piece of your own business. By the top, you've built the whole thing.</p>
+    </div>
+    <div class="ladder reveal">
+      <div class="rung"><div class="node">1</div><div class="r-body"><h4>Money Is Water</h4><p>How money actually moves — cash flow, not just saving.</p><span class="build">Your cash-flow map</span></div></div>
+      <div class="rung"><div class="node">2</div><div class="r-body"><h4>Markets & Capital</h4><p>How markets, trading and capital really work.</p><span class="build">Your opportunity thesis</span></div></div>
+      <div class="rung"><div class="node">3</div><div class="r-body"><h4>Equity, Shares & Valuation</h4><p>What ownership is and how companies get valued.</p><span class="build">Your cap table</span></div></div>
+      <div class="rung"><div class="node">4</div><div class="r-body"><h4>Entities & Leverage</h4><p>LLCs, S-corps, C-corps — what each is for.</p><span class="build">Your formation plan</span></div></div>
+      <div class="rung"><div class="node">5</div><div class="r-body"><h4>SSN vs EIN & Credit</h4><p>The two identities and how credit works through both.</p><span class="build">Your credit action plan</span></div></div>
+      <div class="rung"><div class="node">6</div><div class="r-body"><h4>Buy, Don't Just Build</h4><p>Acquiring businesses already proven to work.</p><span class="build">An acquisition breakdown</span></div></div>
+      <div class="rung"><div class="node">7</div><div class="r-body"><h4>Real Estate to Wealth</h4><p>Wholesaling, your first property, a portfolio.</p><span class="build">Your first deal analysis</span></div></div>
+      <div class="rung"><div class="node">8</div><div class="r-body"><h4>Raising Capital</h4><p>Pitch decks and raising money for your shares.</p><span class="build">Your pitch deck (v1)</span></div></div>
+      <div class="rung"><div class="node">9</div><div class="r-body"><h4>Scale & Portfolio</h4><p>Growing companies and stacking a portfolio.</p><span class="build">Your growth roadmap</span></div></div>
+      <div class="rung"><div class="node">10</div><div class="r-body"><h4>Capstone: Become the Owner</h4><p>Put it all together and present like a pro.</p><span class="build">Your full portfolio</span></div></div>
+      <div class="summit"><div class="node">★</div><div class="s-body"><h3>Graduation</h3><p>You cross the stage with real skills, a real plan, and the proof to show for it. The summit of the climb.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="block how">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="rule"></div><span class="eyebrow" style="display:block;margin-top:18px">How It Works</span><h2>A real school. Run like <i>family.</i></h2></div>
+    <div class="cards">
+      <div class="card reveal"><div class="ic">🎥</div><h3>Live Weekly Sessions</h3><p>One night a week, we meet live — teach, break it down, answer every question. That's the heartbeat.</p></div>
+      <div class="card reveal"><div class="ic">🤝</div><h3>A Real Community</h3><p>You climb with a cohort — peers building right beside you. Nobody does this alone.</p></div>
+      <div class="card reveal"><div class="ic">🫱</div><h3>Nobody Left Behind</h3><p>We track your progress and reach out if you fall back. You showed up — we don't let you slip.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GRADUATION -->
+<section class="block grad">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="rule" style="background:var(--gold-bright)"></div><span class="eyebrow" style="display:block;margin-top:18px">The Summit</span><h2>What you walk across the stage with.</h2></div>
+    <div class="payoff reveal">
+      <div class="p"><div class="pi">📜</div><div class="t">Real Certificate</div></div>
+      <div class="p"><div class="pi">💼</div><div class="t">Built LinkedIn</div></div>
+      <div class="p"><div class="pi">📊</div><div class="t">A Pitch Deck</div></div>
+      <div class="p"><div class="pi">🏛️</div><div class="t">Business Plan</div></div>
+      <div class="p"><div class="pi">🌊</div><div class="t">Your Portfolio</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="closing">
+  <div class="wrap reveal">
+    <h2>Show up. <i>Climb.</i></h2>
+    <p>Not enrolled yet? The founding Fall cohort is 50 seats, closing Oct 15.</p>
+    <a href="billionaires-club.html" class="btn">Claim Your Seat →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="crest2">THE BILLIONAIRES CLUB</div>
+    <div>From the block to board rooms.</div>
+    <p class="fine">The Academy is an educational program of Dyrique Mendoza LLC. Business education only — not financial, legal, investment, or tax advice. © 2026 Dyrique Mendoza LLC.</p>
+  </div>
+</footer>
+
+<script>
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
