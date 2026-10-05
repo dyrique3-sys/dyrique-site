@@ -33,8 +33,22 @@
   .bar b{color:var(--gold-bright);font-weight:700}
 
   /* hero */
-  .hero{position:relative;background:radial-gradient(ellipse at 50% -10%,var(--navy) 0%,var(--midnight) 70%);color:#fff;text-align:center;padding:70px 0 80px;overflow:hidden}
-  .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 20%,rgba(231,178,62,.14),transparent 55%);pointer-events:none}
+  .hero{position:relative;background:linear-gradient(rgba(8,24,43,.80),rgba(8,24,43,.93)),url('bc-img/crew.jpg') center 28%/cover;color:#fff;text-align:center;padding:70px 0 80px;overflow:hidden}
+  .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 20%,rgba(231,178,62,.16),transparent 55%);pointer-events:none}
+
+  /* image bands */
+  .imgband{position:relative;min-height:62vh;display:flex;align-items:center;overflow:hidden}
+  .imgband .bg{position:absolute;inset:0;background-size:cover;background-position:center 25%;z-index:0}
+  .imgband.bd .bg{background-image:url('bc-img/build.jpg')}
+  .imgband.gr .bg{background-image:url('bc-img/grind.jpg')}
+  .imgband::after{content:"";position:absolute;inset:0;z-index:1}
+  .imgband.left::after{background:linear-gradient(90deg,rgba(8,24,43,.92),rgba(8,24,43,.55) 55%,rgba(8,24,43,.2))}
+  .imgband.right{justify-content:flex-end;text-align:right}
+  .imgband.right::after{background:linear-gradient(270deg,rgba(8,24,43,.92),rgba(8,24,43,.55) 55%,rgba(8,24,43,.2))}
+  .imgband .content{position:relative;z-index:2;color:#fff;max-width:500px;padding:0 7vw}
+  .imgband h2{font-size:clamp(1.9rem,4vw,3rem);line-height:1.08;margin:12px 0 12px;color:#fff}
+  .imgband h2 i{color:var(--gold-bright);font-weight:500}
+  .imgband p{color:rgba(255,255,255,.85);font-weight:300;font-size:1.05rem}
   .hero .wrap{position:relative;z-index:2}
   .crest{font-family:'Fraunces',serif;font-weight:600;font-size:1.1rem;letter-spacing:.3em;color:var(--gold);border:1px solid rgba(198,161,91,.4);display:inline-block;padding:8px 18px;border-radius:2px;margin-bottom:26px}
   .hero h1{font-size:clamp(2.6rem,7vw,5rem);line-height:1.0;margin:8px 0 10px;color:#fff}
@@ -81,10 +95,10 @@
   .mod p{font-size:.84rem;color:rgba(255,255,255,.62);font-weight:300}
 
   /* proof */
-  .proof{background:var(--cream-2);text-align:center}
-  .proof .quote{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.4rem,3.2vw,2.1rem);color:var(--navy);max-width:20ch;margin:0 auto 20px;line-height:1.25}
-  .proof .badges{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin-top:14px;color:var(--muted);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
-  .proof .badges span::before{content:"◆";color:var(--gold);margin-right:8px;font-size:.6rem;vertical-align:middle}
+  .proof{position:relative;background:linear-gradient(rgba(8,24,43,.86),rgba(8,24,43,.92)),url('bc-img/together.jpg') center/cover;text-align:center;color:#fff}
+  .proof .quote{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.4rem,3.2vw,2.1rem);color:#fff;max-width:20ch;margin:0 auto 20px;line-height:1.25}
+  .proof .badges{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin-top:14px;color:rgba(255,255,255,.78);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+  .proof .badges span::before{content:"◆";color:var(--gold-bright);margin-right:8px;font-size:.6rem;vertical-align:middle}
 
   /* ENROLL */
   .enroll{background:radial-gradient(ellipse at 50% 0%,var(--navy) 0%,var(--midnight) 75%);color:#fff;padding:90px 0}
@@ -169,6 +183,16 @@
   </div>
 </section>
 
+<!-- BUILD BAND -->
+<section class="imgband bd left">
+  <div class="bg"></div>
+  <div class="content reveal">
+    <span class="eyebrow">For the ones building themselves</span>
+    <h2>This is what the <i>come-up</i> looks like.</h2>
+    <p>Real students, learning the moves nobody taught them — turning ideas into income, and themselves into owners.</p>
+  </div>
+</section>
+
 <!-- CURRICULUM -->
 <section class="block curric">
   <div class="wrap">
@@ -193,11 +217,21 @@
   </div>
 </section>
 
+<!-- GRIND BAND -->
+<section class="imgband gr right">
+  <div class="bg"></div>
+  <div class="content reveal">
+    <span class="eyebrow">The work is the gift</span>
+    <h2>Show up. Do the work.<br><i>Walk out unstoppable.</i></h2>
+    <p>One semester of real skills — and you'll move through the world different.</p>
+  </div>
+</section>
+
 <!-- PROOF -->
 <section class="block proof">
   <div class="wrap reveal">
     <div class="quote">"From standing in these lines as a kid — to giving back."</div>
-    <p style="color:var(--muted);font-weight:300;max-width:52ch;margin:0 auto">Founded by <b style="color:var(--navy)">Dyrique Mendoza</b> — Miami entrepreneur, business consultant, and founder of Dyrique Mendoza LLC. Built for the communities he comes from.</p>
+    <p style="color:rgba(255,255,255,.8);font-weight:300;max-width:52ch;margin:0 auto">Founded by <b style="color:var(--gold-bright)">Dyrique Mendoza</b> — Miami entrepreneur, business consultant, and founder of Dyrique Mendoza LLC. Built for the communities he comes from.</p>
     <div class="badges">
       <span>Featured on 7News</span>
       <span>Rooted in Miami-Dade</span>
