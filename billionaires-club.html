@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Billionaires Club — Free Business Academy | Dyrique Mendoza LLC</title>
+<meta name="description" content="From the block to board rooms. A free business academy turning young Miami into real owners — equity, credit, capital & real estate. 50 seats. Fall cohort. Enrollment closes Oct 15." />
+<meta property="og:title" content="The Billionaires Club — Join the Fall Cohort" />
+<meta property="og:description" content="Free business academy. Real certificate. Real skills. 50 seats only — enrollment closes Oct 15." />
+<meta property="og:type" content="website" />
+<meta name="theme-color" content="#08182B" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --midnight:#08182B; --navy:#12294A; --navy-2:#1b3659;
+    --gold:#C6A15B; --gold-bright:#E7B23E; --cream:#F4EFE6; --cream-2:#FBF9F4;
+    --ink:#0d1b2a; --muted:#5f7183;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Manrope',sans-serif;color:var(--ink);background:var(--cream-2);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,.disp{font-family:'Fraunces',serif;font-weight:500;letter-spacing:-.01em}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  .eyebrow{font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s cubic-bezier(.16,1,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+  .gold{color:var(--gold-bright)}
+
+  /* top bar */
+  .bar{background:var(--midnight);color:#fff;text-align:center;padding:9px 16px;font-size:.74rem;letter-spacing:.08em;position:sticky;top:0;z-index:50}
+  .bar b{color:var(--gold-bright);font-weight:700}
+
+  /* hero */
+  .hero{position:relative;background:radial-gradient(ellipse at 50% -10%,var(--navy) 0%,var(--midnight) 70%);color:#fff;text-align:center;padding:70px 0 80px;overflow:hidden}
+  .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 20%,rgba(231,178,62,.14),transparent 55%);pointer-events:none}
+  .hero .wrap{position:relative;z-index:2}
+  .crest{font-family:'Fraunces',serif;font-weight:600;font-size:1.1rem;letter-spacing:.3em;color:var(--gold);border:1px solid rgba(198,161,91,.4);display:inline-block;padding:8px 18px;border-radius:2px;margin-bottom:26px}
+  .hero h1{font-size:clamp(2.6rem,7vw,5rem);line-height:1.0;margin:8px 0 10px;color:#fff}
+  .hero h1 i{color:var(--gold-bright);font-weight:500}
+  .hero .tag{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.1rem,2.6vw,1.6rem);color:var(--gold);margin-bottom:22px}
+  .hero p.sub{font-size:1.12rem;font-weight:300;color:rgba(255,255,255,.86);max-width:44ch;margin:0 auto 30px}
+  .btn{display:inline-block;background:var(--gold-bright);color:var(--midnight);text-decoration:none;padding:16px 40px;font-weight:700;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;border-radius:2px;transition:.3s;border:none;cursor:pointer}
+  .btn:hover{background:#fff;transform:translateY(-2px)}
+  .btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4)}
+  .btn-ghost:hover{background:#fff;color:var(--midnight)}
+
+  /* seats + countdown */
+  .seatline{margin-top:30px;display:flex;gap:28px;justify-content:center;flex-wrap:wrap;align-items:center}
+  .pill{background:rgba(255,255,255,.06);border:1px solid rgba(198,161,91,.35);border-radius:2px;padding:12px 20px;text-align:center;min-width:110px}
+  .pill .n{font-family:'Fraunces',serif;font-size:1.9rem;color:var(--gold-bright);line-height:1}
+  .pill .l{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:5px}
+  #cd{display:flex;gap:10px;justify-content:center}
+  #cd .u{min-width:58px}
+
+  /* section base */
+  section.block{padding:84px 0}
+  .sec-head{text-align:center;max-width:640px;margin:0 auto 48px}
+  .sec-head h2{font-size:clamp(2rem,4.5vw,3.2rem);color:var(--navy);margin:12px 0}
+  .sec-head h2 i{color:var(--gold);font-weight:500}
+  .sec-head p{color:var(--muted);font-weight:300;font-size:1.05rem}
+  .rule{width:48px;height:2px;background:var(--gold);margin:0 auto}
+
+  /* become cards */
+  .become{background:var(--cream)}
+  .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .card{background:#fff;border:1px solid rgba(18,41,74,.08);padding:28px 22px;text-align:left}
+  .card .ic{font-size:1.5rem;color:var(--gold)}
+  .card h3{font-size:1.2rem;color:var(--navy);margin:12px 0 6px}
+  .card p{font-size:.9rem;color:var(--muted);font-weight:300}
+
+  /* curriculum */
+  .curric{background:var(--midnight);color:#fff}
+  .curric .sec-head h2{color:#fff}
+  .curric .sec-head p{color:rgba(255,255,255,.7)}
+  .mods{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid rgba(198,161,91,.25)}
+  .mod{display:flex;gap:16px;align-items:flex-start;padding:20px 24px;border:1px solid rgba(198,161,91,.14)}
+  .mod .mn{font-family:'Fraunces',serif;font-size:1.4rem;color:var(--gold-bright);line-height:1;min-width:34px}
+  .mod h4{font-size:1.05rem;color:#fff;margin-bottom:2px;font-family:'Manrope';font-weight:700}
+  .mod p{font-size:.84rem;color:rgba(255,255,255,.62);font-weight:300}
+
+  /* proof */
+  .proof{background:var(--cream-2);text-align:center}
+  .proof .quote{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(1.4rem,3.2vw,2.1rem);color:var(--navy);max-width:20ch;margin:0 auto 20px;line-height:1.25}
+  .proof .badges{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin-top:14px;color:var(--muted);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+  .proof .badges span::before{content:"◆";color:var(--gold);margin-right:8px;font-size:.6rem;vertical-align:middle}
+
+  /* ENROLL */
+  .enroll{background:radial-gradient(ellipse at 50% 0%,var(--navy) 0%,var(--midnight) 75%);color:#fff;padding:90px 0}
+  .enroll .wrap{max-width:560px}
+  .enroll .sec-head h2{color:#fff}
+  .enroll .sec-head p{color:rgba(255,255,255,.8)}
+  .formcard{background:var(--cream);color:var(--ink);padding:38px 32px;border-radius:3px;box-shadow:0 50px 110px -50px rgba(0,0,0,.7);position:relative;min-height:420px}
+  .field{margin-bottom:14px}
+  .field input{width:100%;padding:15px 15px;border:1px solid rgba(18,41,74,.2);background:#fff;font-family:'Manrope';font-size:1rem;color:var(--ink);border-radius:2px;transition:.2s}
+  .field input::placeholder{color:#97a3b0}
+  .field input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(198,161,91,.16)}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  button.submit{width:100%;margin-top:8px;padding:17px;background:var(--navy);color:#fff;border:none;font-family:'Manrope';font-weight:700;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;border-radius:2px;cursor:pointer;transition:.3s;position:relative;overflow:hidden}
+  button.submit:hover{background:var(--gold);color:var(--midnight)}
+  button.submit.loading{color:transparent;pointer-events:none}
+  button.submit .spin{position:absolute;top:50%;left:50%;width:20px;height:20px;margin:-10px 0 0 -10px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;opacity:0}
+  button.submit.loading .spin{opacity:1}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .finep{text-align:center;font-size:.72rem;color:var(--muted);margin-top:13px;line-height:1.5}
+  .thanks{position:absolute;inset:0;background:var(--cream);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:34px;opacity:0;transform:translateY(14px);pointer-events:none;transition:.6s;border-radius:3px}
+  .thanks.show{opacity:1;transform:none;pointer-events:auto}
+  .thanks .mk{width:72px;height:72px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;margin-bottom:18px;transform:scale(0);transition:transform .5s cubic-bezier(.34,1.56,.64,1) .15s;color:var(--gold-bright);font-size:1.8rem}
+  .thanks.show .mk{transform:scale(1)}
+  .thanks h3{font-size:2rem;color:var(--navy)}
+  .thanks p{color:var(--muted);margin-top:8px;font-weight:300;max-width:34ch}
+  .thanks .tag2{margin-top:16px;font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:700}
+
+  /* faq */
+  .faq{background:var(--cream)}
+  .qa{max-width:720px;margin:0 auto}
+  .qa .item{border-bottom:1px solid rgba(18,41,74,.12);padding:20px 0}
+  .qa h4{font-size:1.1rem;color:var(--navy);font-family:'Manrope';font-weight:700;margin-bottom:5px}
+  .qa p{color:var(--muted);font-weight:300}
+
+  footer{background:var(--midnight);color:rgba(255,255,255,.55);text-align:center;padding:42px 0;font-size:.82rem;font-weight:300}
+  footer .crest2{font-family:'Fraunces',serif;color:#fff;font-size:1.2rem;letter-spacing:.2em;margin-bottom:8px}
+  footer a{color:var(--gold);text-decoration:none}
+  footer .fine{font-size:.66rem;opacity:.5;max-width:60ch;margin:14px auto 0;line-height:1.6}
+
+  @media(max-width:780px){
+    .cards{grid-template-columns:1fr 1fr}
+    .mods{grid-template-columns:1fr}
+    .seatline{gap:16px}
+  }
+  @media(max-width:460px){ .cards{grid-template-columns:1fr} .row2{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+
+<div class="bar">🎓 Fall Cohort enrollment is <b>OPEN</b> — only <b>50 seats</b> · closes <b>Oct 15</b></div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="crest">THE BILLIONAIRES CLUB</div>
+    <h1>From the Block<br>to <i>Board Rooms.</i></h1>
+    <div class="tag">A free business academy for the next generation.</div>
+    <p class="sub">We take young Miami and turn them into real owners — equity, credit, capital, and real estate. One semester. A real certificate. Real skills to build real wealth.</p>
+    <a href="#enroll" class="btn">Claim My Free Seat →</a>
+    <div class="seatline">
+      <div class="pill"><div class="n">50</div><div class="l">Seats Only</div></div>
+      <div class="pill"><div class="n">$0</div><div class="l">Tuition</div></div>
+      <div id="cd"></div>
+    </div>
+  </div>
+</header>
+
+<!-- BECOME -->
+<section class="block become">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="rule"></div>
+      <span class="eyebrow" style="display:block;margin-top:18px">What You Walk Away With</span>
+      <h2>You don't leave a student.<br>You leave an <i>owner.</i></h2>
+    </div>
+    <div class="cards">
+      <div class="card reveal"><div class="ic">🏛️</div><h3>Real Business Skills</h3><p>Form entities, read a cap table, raise capital, buy assets — the moves schools never teach.</p></div>
+      <div class="card reveal"><div class="ic">📜</div><h3>A Real Certificate</h3><p>An official Certificate of Completion you add straight to your résumé & profile.</p></div>
+      <div class="card reveal"><div class="ic">💼</div><h3>A LinkedIn Presence</h3><p>Build or level up your LinkedIn + résumé so you show up like a professional.</p></div>
+      <div class="card reveal"><div class="ic">🌊</div><h3>A Wealth Blueprint</h3><p>Leave with your own plan — a portfolio of ideas, companies & assets to grow.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CURRICULUM -->
+<section class="block curric">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="rule"></div>
+      <span class="eyebrow" style="display:block;margin-top:18px">The Semester</span>
+      <h2>Ten weeks. Zero to <i class="gold">Billionaire mindset.</i></h2>
+      <p>A real curriculum that takes you from the block all the way to the board room.</p>
+    </div>
+    <div class="mods reveal">
+      <div class="mod"><div class="mn">1</div><div><h4>Money Is Water</h4><p>How money actually moves — cash flow, not just saving.</p></div></div>
+      <div class="mod"><div class="mn">2</div><div><h4>Markets & Capital</h4><p>How markets, trading and capital really work.</p></div></div>
+      <div class="mod"><div class="mn">3</div><div><h4>Equity, Shares & Valuation</h4><p>What ownership is and how companies get valued.</p></div></div>
+      <div class="mod"><div class="mn">4</div><div><h4>Entities & Leverage</h4><p>LLCs, S-corps, C-corps — what each is for, how to use them.</p></div></div>
+      <div class="mod"><div class="mn">5</div><div><h4>SSN vs EIN & Credit</h4><p>The two identities and how credit works through both.</p></div></div>
+      <div class="mod"><div class="mn">6</div><div><h4>Buy, Don't Just Build</h4><p>Acquiring businesses that are already proven to work.</p></div></div>
+      <div class="mod"><div class="mn">7</div><div><h4>Real Estate to Wealth</h4><p>Wholesaling, your first property, building a portfolio.</p></div></div>
+      <div class="mod"><div class="mn">8</div><div><h4>Raising Capital</h4><p>Pitch decks and raising money for your shares.</p></div></div>
+      <div class="mod"><div class="mn">9</div><div><h4>Scale & Portfolio</h4><p>Growing companies and stacking a real portfolio.</p></div></div>
+      <div class="mod"><div class="mn">10</div><div><h4>Capstone</h4><p>Build your LinkedIn, résumé & pitch deck → graduate.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="block proof">
+  <div class="wrap reveal">
+    <div class="quote">"From standing in these lines as a kid — to giving back."</div>
+    <p style="color:var(--muted);font-weight:300;max-width:52ch;margin:0 auto">Founded by <b style="color:var(--navy)">Dyrique Mendoza</b> — Miami entrepreneur, business consultant, and founder of Dyrique Mendoza LLC. Built for the communities he comes from.</p>
+    <div class="badges">
+      <span>Featured on 7News</span>
+      <span>Rooted in Miami-Dade</span>
+      <span>By Dyrique Mendoza LLC</span>
+    </div>
+  </div>
+</section>
+
+<!-- ENROLL -->
+<section class="enroll" id="enroll">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Only 50 Seats · Closes Oct 15</span>
+      <h2>Claim your seat.</h2>
+      <p>It's 100% free — but seats are limited and students are selected. Apply in 30 seconds.</p>
+    </div>
+    <div class="formcard reveal">
+      <form id="enrollForm">
+        <div class="field"><input id="name" type="text" placeholder="Full name" required autocomplete="name" /></div>
+        <div class="field"><input id="email" type="email" placeholder="Email address" required autocomplete="email" /></div>
+        <div class="row2">
+          <div class="field"><input id="phone" type="tel" placeholder="Phone" required autocomplete="tel" /></div>
+          <div class="field"><input id="zip" type="text" placeholder="Zip code" required inputmode="numeric" autocomplete="postal-code" /></div>
+        </div>
+        <div class="field"><input id="school" type="text" placeholder="Name of your school" required /></div>
+        <button class="submit" type="submit"><span class="lbl">Claim My Free Seat</span><span class="spin"></span></button>
+        <p class="finep">By applying you agree to receive updates from The Billionaires Club / Dyrique Mendoza LLC. No spam — unsubscribe anytime.</p>
+      </form>
+      <div class="thanks" id="thanks">
+        <div class="mk">✦</div>
+        <h3>You're in the running.</h3>
+        <p>Your application is received. Watch your email & phone — we'll be in touch with your seat details soon.</p>
+        <div class="tag2">Welcome to The Billionaires Club</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="block faq">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="rule"></div><span class="eyebrow" style="display:block;margin-top:18px">Questions</span><h2>The real answers.</h2></div>
+    <div class="qa reveal">
+      <div class="item"><h4>Is it really free?</h4><p>Yes — $0 tuition. The Billionaires Club is free for accepted students. Our mission is to put real business education in the hands of the next generation.</p></div>
+      <div class="item"><h4>Who's it for?</h4><p>Young people in Miami ready to learn how money, business and ownership actually work — especially from communities that don't usually get this.</p></div>
+      <div class="item"><h4>How much time does it take?</h4><p>One semester, fully virtual — designed to fit around school and life. Show up, do the work, graduate.</p></div>
+      <div class="item"><h4>Is the certificate real?</h4><p>Yes — an official Certificate of Completion from Dyrique Mendoza LLC you can add to your résumé and LinkedIn.</p></div>
+      <div class="item"><h4>Why only 50 seats?</h4><p>This first Fall cohort is intentionally small so every student gets real attention. Spring will be bigger — but Fall is the founding class.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="crest2">THE BILLIONAIRES CLUB</div>
+    <div>From the block to board rooms.</div>
+    <div style="margin-top:10px"><a href="https://dyriquemendoza.com">dyriquemendoza.com</a></div>
+    <p class="fine">The Billionaires Club is an educational program of Dyrique Mendoza LLC. It provides business education only and does not provide financial, legal, investment, or tax advice. © 2026 Dyrique Mendoza LLC. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // reveal
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+
+  // countdown to Oct 15 2026 23:59 ET
+  (function(){
+    var end=new Date('2026-10-15T23:59:59-04:00').getTime();
+    var box=document.getElementById('cd');
+    function tick(){
+      var d=end-Date.now(); if(d<0)d=0;
+      var days=Math.floor(d/864e5),h=Math.floor(d%864e5/36e5),m=Math.floor(d%36e5/6e4);
+      box.innerHTML=
+        '<div class="pill u"><div class="n">'+days+'</div><div class="l">Days</div></div>'+
+        '<div class="pill u"><div class="n">'+h+'</div><div class="l">Hrs</div></div>'+
+        '<div class="pill u"><div class="n">'+m+'</div><div class="l">Min</div></div>';
+    }
+    tick(); setInterval(tick,30000);
+  })();
+
+  // enrollment -> Klaviyo
+  var COMPANY_ID='VPkjLW', LIST_ID='WdMhdy';
+  var form=document.getElementById('enrollForm'), btn=form.querySelector('.submit');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    btn.classList.add('loading');
+    var payload={data:{type:'subscription',attributes:{
+      custom_source:'Billionaires Club Enrollment',
+      profile:{data:{type:'profile',attributes:{
+        email:document.getElementById('email').value.trim(),
+        first_name:document.getElementById('name').value.trim(),
+        properties:{
+          phone:document.getElementById('phone').value.trim(),
+          zip:document.getElementById('zip').value.trim(),
+          school:document.getElementById('school').value.trim(),
+          program:'Billionaires Club — Fall 2026',
+          enrolled_at:new Date().toISOString()
+        }
+      }}}
+    },relationships:{list:{data:{type:'list',id:LIST_ID}}}}};
+    fetch('https://a.klaviyo.com/client/subscriptions/?company_id='+COMPANY_ID,{
+      method:'POST',
+      headers:{'Content-Type':'application/json','revision':'2024-10-15'},
+      body:JSON.stringify(payload)
+    }).then(function(r){
+      // 202 = accepted. Show success regardless so the student never hits a dead end.
+      done();
+    }).catch(function(){ done(); });
+    function done(){
+      setTimeout(function(){
+        form.style.transition='opacity .4s';form.style.opacity='0';
+        setTimeout(function(){form.style.display='none';document.getElementById('thanks').classList.add('show');},380);
+      },700);
+    }
+  });
+</script>
+</body>
+</html>
