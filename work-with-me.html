@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Work With Me — Dyrique Mendoza</title>
+<meta name="description" content="Book a free intro call with Dyrique Mendoza, or choose how we work together — fundability strategy and advisory for the next generation of founders.">
+<link rel="icon" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#12294A; --midnight:#0A1B30; --gold:#C6A15B; --gold2:#E7B23E;
+  --cream:#F4EFE6; --ink:#0A1B30; --muted:#5d6b7e; --line:rgba(18,41,74,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--cream);-webkit-font-smoothing:antialiased;line-height:1.6}
+.serif{font-family:'Fraunces',Georgia,serif}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+/* nav */
+.nav{display:flex;align-items:center;justify-content:space-between;padding:22px 24px;max-width:1040px;margin:0 auto}
+.brand{font-family:'Fraunces',serif;font-weight:600;letter-spacing:1px;font-size:17px;color:var(--navy)}
+.nav a.back{font-size:13px;letter-spacing:.5px;color:var(--muted)}
+.nav a.back:hover{color:var(--navy)}
+
+/* hero */
+.hero{background:var(--navy);color:var(--cream);padding:88px 0 92px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold) 40%,var(--gold2) 50%,var(--gold) 60%,transparent)}
+.hero .wrap{max-width:720px}
+.eyebrow{text-transform:uppercase;letter-spacing:3px;font-size:11px;color:var(--gold2);margin-bottom:20px;font-weight:600}
+.hero h1{font-size:clamp(34px,6vw,56px);font-weight:500;line-height:1.08;letter-spacing:-.5px}
+.hero h1 i{color:var(--gold2);font-style:italic}
+.hero p{margin-top:20px;font-size:18px;color:rgba(244,239,230,.82);font-weight:300;max-width:560px}
+.cta{display:inline-flex;align-items:center;gap:10px;margin-top:34px;background:var(--gold);color:var(--midnight);
+  padding:16px 30px;font-weight:600;font-size:14px;letter-spacing:.5px;border:none;cursor:pointer;transition:.2s}
+.cta:hover{background:var(--gold2);transform:translateY(-2px)}
+.cta.line{background:transparent;color:var(--cream);border:1px solid rgba(244,239,230,.35)}
+.cta.line:hover{border-color:var(--gold2);color:var(--gold2);background:transparent}
+.freenote{margin-top:14px;font-size:13px;color:rgba(244,239,230,.6);letter-spacing:.3px}
+
+/* tiers */
+.tiers{padding:84px 0}
+.tiers h2{font-size:clamp(26px,4vw,38px);font-weight:500;color:var(--navy);text-align:center;letter-spacing:-.3px}
+.tiers .lead{text-align:center;color:var(--muted);max-width:540px;margin:14px auto 0;font-weight:300}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
+@media(max-width:820px){.grid{grid-template-columns:1fr;max-width:440px;margin-left:auto;margin-right:auto}}
+.card{background:#fff;border:1px solid var(--line);padding:34px 28px 32px;display:flex;flex-direction:column;position:relative;transition:.25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 30px 60px -40px rgba(18,41,74,.4)}
+.card.feature{border-color:var(--gold);box-shadow:0 30px 60px -45px rgba(198,161,91,.6)}
+.card .tag{position:absolute;top:-11px;left:28px;background:var(--gold);color:var(--midnight);font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px}
+.card h3{font-family:'Fraunces',serif;font-size:23px;font-weight:600;color:var(--navy)}
+.card .price{font-family:'Fraunces',serif;font-size:40px;font-weight:600;color:var(--navy);margin:10px 0 2px}
+.card .price span{font-size:15px;color:var(--muted);font-family:'Inter',sans-serif;font-weight:400}
+.card .desc{color:var(--muted);font-size:14.5px;margin:14px 0 22px;font-weight:300;flex:1}
+.card ul{list-style:none;margin:0 0 24px;font-size:14px;color:#33404f}
+.card li{padding:7px 0 7px 22px;position:relative}
+.card li::before{content:"";position:absolute;left:0;top:14px;width:9px;height:9px;background:var(--gold);transform:rotate(45deg)}
+.pay{display:block;text-align:center;padding:14px;font-weight:600;font-size:14px;letter-spacing:.5px;border:1px solid var(--navy);color:var(--navy);background:transparent;transition:.2s;cursor:pointer}
+.pay:hover{background:var(--navy);color:var(--cream)}
+.card.feature .pay{background:var(--navy);color:var(--cream)}
+.card.feature .pay:hover{background:var(--gold);color:var(--midnight);border-color:var(--gold)}
+
+/* close band */
+.close{background:var(--midnight);color:var(--cream);padding:70px 0;text-align:center}
+.close h2{font-family:'Fraunces',serif;font-size:clamp(24px,4vw,34px);font-weight:500}
+.close h2 i{color:var(--gold2)}
+.close p{color:rgba(244,239,230,.7);margin:14px auto 0;max-width:480px;font-weight:300}
+
+/* footer */
+.foot{background:var(--navy);color:rgba(244,239,230,.6);padding:34px 0;font-size:13px;text-align:center;border-top:1px solid rgba(244,239,230,.1)}
+.foot a{color:var(--gold2)}
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <a href="index.html" class="brand">DYRIQUE MENDOZA</a>
+  <a href="index.html" class="back">← Back to home</a>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Work With Me</div>
+    <h1 class="serif">Let's map your <i>next move.</i></h1>
+    <p>Start with a free intro call. We'll talk through where you are, where you're trying to go, and the clearest path to get you fundable — no pressure, no pitch.</p>
+    <a class="cta" href="https://calendly.com/dyrique3" target="_blank" rel="noopener">Book a Free Intro Call →</a>
+    <div class="freenote">Free · 1-on-1 · booked through Calendly</div>
+  </div>
+</header>
+
+<!-- TIERS -->
+<section class="tiers">
+  <div class="wrap">
+    <h2 class="serif">Ways we work together</h2>
+    <p class="lead">Most people start with the free call. When you're ready to go deeper, here's the menu.</p>
+    <div class="grid">
+
+      <div class="card">
+        <h3 class="serif">Focus Reset</h3>
+        <div class="price">$50<span> / session</span></div>
+        <p class="desc">A focused 1-on-1 to unstick one thing — your credit, your structure, or your next move. You leave with 3 clear actions in writing.</p>
+        <ul>
+          <li>30–45 min, 1-on-1</li>
+          <li>One problem, solved</li>
+          <li>3 action steps in writing</li>
+        </ul>
+        <a class="pay" href="https://calendly.com/dyrique3" target="_blank" rel="noopener" data-tier="focus-50">Get Started</a>
+      </div>
+
+      <div class="card feature">
+        <span class="tag">Most Popular</span>
+        <h3 class="serif">Fundability Deep Dive</h3>
+        <div class="price">$150<span> / session</span></div>
+        <p class="desc">The full map. We go deep on your actual file and build your complete fundability roadmap in the exact order for your business — plus the funding plan that follows.</p>
+        <ul>
+          <li>90 min, over Zoom</li>
+          <li>Your full fundability roadmap</li>
+          <li>The whole staircase, drawn</li>
+        </ul>
+        <a class="pay" href="https://calendly.com/dyrique3/fundability-deep-dive" target="_blank" rel="noopener" data-tier="deepdive-150">Get Started</a>
+      </div>
+
+      <div class="card">
+        <h3 class="serif">Monthly Advisory</h3>
+        <div class="price">$500<span> / month</span></div>
+        <p class="desc">Ongoing in your corner. We work your plan month over month — fundability, funding, and growth — with a real person who's building right alongside you.</p>
+        <ul>
+          <li>Monthly 1-on-1 sessions</li>
+          <li>Between-call support</li>
+          <li>Your long-game, handled</li>
+        </ul>
+        <a class="pay" href="https://calendly.com/dyrique3" target="_blank" rel="noopener" data-tier="advisory-500">Get Started</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CLOSE -->
+<section class="close">
+  <div class="wrap">
+    <h2 class="serif">Not sure where to start? <i>Just book the free call.</i></h2>
+    <p>We'll figure out the right move together — then you decide.</p>
+    <a class="cta" href="https://calendly.com/dyrique3" target="_blank" rel="noopener" style="margin-top:26px">Book a Free Intro Call →</a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    Dyrique Mendoza LLC · Brickell, Miami · <a href="mailto:info@dyriquemendoza.com">info@dyriquemendoza.com</a><br>
+    <span style="opacity:.6">From the block to the boardroom.</span>
+  </div>
+</footer>
+
+</body>
+</html>
