@@ -4,151 +4,235 @@
 <meta charset="utf-8"><script async src="https://www.googletagmanager.com/gtag/js?id=G-CK3XS3T1F2"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CK3XS3T1F2');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dyrique Mendoza — Entrepreneur · Speaker · Brand Builder</title>
-<meta name="description" content="Dyrique Mendoza — from the block to the boardroom. Entrepreneur, speaker and brand builder helping the next generation launch, build and fund their businesses. All my links in one place.">
+<meta name="description" content="Dyrique Mendoza — from the block to the boardroom. 21, Brickell-based, building brands, speaking on stages, featured on 7News. See the proof, then pick your direction.">
 <meta property="og:title" content="Dyrique Mendoza — From the Block to the Boardroom">
-<meta property="og:description" content="Entrepreneur · Speaker · Brand Builder. Everything I do, in one place.">
+<meta property="og:description" content="21. Brickell. Building brands for the next generation. See the proof.">
 <meta property="og:image" content="media/dyrique-hero.jpg">
 <link rel="icon" href="favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#12294A;--midnight:#0A1B30;--black:#060f1c;--gold:#C6A15B;--gold2:#E7B23E;--cream:#F4EFE6;--muted:rgba(244,239,230,.62);--line:rgba(244,239,230,.14)}
+:root{--navy:#12294A;--midnight:#0A1B30;--black:#050c17;--gold:#C6A15B;--gold2:#E7B23E;--cream:#F4EFE6;--muted:rgba(244,239,230,.6);--line:rgba(244,239,230,.13)}
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',system-ui,sans-serif;background:var(--black);color:var(--cream);-webkit-font-smoothing:antialiased;line-height:1.55}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--black);color:var(--cream);-webkit-font-smoothing:antialiased;line-height:1.5;overflow-x:hidden}
 .serif{font-family:'Fraunces',Georgia,serif}
 a{color:inherit;text-decoration:none}
-.page{max-width:540px;margin:0 auto;min-height:100vh;background:linear-gradient(180deg,var(--navy) 0%,var(--midnight) 42%,var(--black) 100%);padding:0 20px 46px}
-img{display:block;max-width:100%}
+img,video{display:block;max-width:100%}
+.page{max-width:560px;margin:0 auto;position:relative;background:var(--black)}
 
-/* hero */
-.hero{position:relative;margin:0 -20px;overflow:hidden}
-.hero img{width:100%;height:300px;object-fit:cover;object-position:center 30%}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,15,28,.15),rgba(6,15,28,.55) 70%,var(--navy))}
-.topband{position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold) 40%,var(--gold2) 50%,var(--gold) 60%,transparent);z-index:3}
+/* ambient animated glow */
+.glowbg{position:fixed;inset:0;z-index:0;pointer-events:none;background:
+  radial-gradient(500px 380px at 20% 8%,rgba(198,161,91,.16),transparent 60%),
+  radial-gradient(520px 420px at 85% 55%,rgba(18,41,74,.55),transparent 60%),
+  radial-gradient(460px 360px at 15% 92%,rgba(231,178,62,.1),transparent 60%);
+  animation:drift 14s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate3d(0,-20px,0) scale(1.06)}}
+.page>*{position:relative;z-index:1}
 
-.id{text-align:center;margin-top:-34px;position:relative;z-index:4}
-.id h1{font-family:'Fraunces',serif;font-size:30px;font-weight:600;letter-spacing:.5px}
-.id .tag{color:var(--gold2);font-size:12.5px;letter-spacing:2px;text-transform:uppercase;margin-top:6px;font-weight:600}
-.id .bio{color:var(--muted);font-size:14px;margin-top:12px;font-weight:300;max-width:400px;margin-left:auto;margin-right:auto}
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.glowbg{animation:none}}
 
-/* proof chips */
-.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:18px auto 4px;max-width:440px}
-.chip{font-size:11px;letter-spacing:.4px;color:var(--cream);border:1px solid var(--line);border-radius:100px;padding:6px 13px;background:rgba(244,239,230,.04)}
-.chip b{color:var(--gold2);font-weight:600}
+/* HERO */
+.hero{position:relative;height:430px;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero img{width:100%;height:100%;object-fit:cover;object-position:center 28%;animation:kb 18s ease-in-out infinite alternate}
+@keyframes kb{to{transform:scale(1.1)}}
+.hero .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,12,23,.25) 0%,rgba(5,12,23,.2) 45%,rgba(5,12,23,.92) 100%)}
+.hero .beam{position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold2),transparent);background-size:50% 100%;animation:sweep 3.5s linear infinite}
+@keyframes sweep{0%{background-position:-50% 0}100%{background-position:150% 0}}
+.hero .htxt{position:absolute;left:0;right:0;bottom:26px;text-align:center;padding:0 24px}
+.hero .pre{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold2);font-weight:700;opacity:0;animation:up .7s .2s forwards}
+.hero h1{font-family:'Fraunces',serif;font-size:36px;font-weight:700;letter-spacing:.5px;line-height:1.02;margin-top:8px;opacity:0;animation:up .7s .4s forwards;text-shadow:0 2px 30px rgba(0,0,0,.6)}
+.hero .tl{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--cream);margin-top:10px;font-weight:600;opacity:0;animation:up .7s .6s forwards}
+.hero .tl b{color:var(--gold2)}
+@keyframes up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.scrollcue{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);color:var(--gold2);font-size:18px;animation:bob 1.6s ease-in-out infinite}
+@keyframes bob{50%{transform:translate(-50%,6px)}}
 
-/* links */
-.links{margin-top:30px;display:flex;flex-direction:column;gap:13px}
-.ln{display:flex;align-items:center;gap:15px;background:rgba(244,239,230,.055);border:1px solid var(--line);padding:17px 20px;transition:.18s;position:relative}
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border-bottom:1px solid var(--line)}
+.st{background:var(--black);padding:20px 6px;text-align:center}
+.st .num{font-family:'Fraunces',serif;font-size:26px;font-weight:700;color:var(--gold2);line-height:1}
+.st .lab{font-size:9.5px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);margin-top:6px}
+
+/* section */
+section{padding:48px 22px}
+.eye{text-align:center;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:10px}
+.h2{font-family:'Fraunces',serif;text-align:center;font-size:27px;font-weight:600;line-height:1.1;letter-spacing:.2px}
+.h2 i{color:var(--gold2);font-style:italic}
+.sub{text-align:center;color:var(--muted);font-size:14px;margin-top:10px;font-weight:300;max-width:420px;margin-left:auto;margin-right:auto}
+
+/* case studies */
+.cases{display:flex;flex-direction:column;gap:18px;margin-top:26px}
+.case{border:1px solid var(--line);overflow:hidden;background:rgba(244,239,230,.03);transition:.25s}
+.case:hover{border-color:rgba(198,161,91,.55);box-shadow:0 24px 60px -40px rgba(198,161,91,.6);transform:translateY(-3px)}
+.case .shot{position:relative;height:180px;overflow:hidden;background:#000}
+.case .shot img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:.5s}
+.case:hover .shot img{transform:scale(1.05)}
+.case .shot .badge{position:absolute;top:12px;left:12px;background:var(--gold);color:var(--midnight);font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:5px 11px}
+.case .cb{padding:18px 20px}
+.case h3{font-family:'Fraunces',serif;font-size:19px;font-weight:600}
+.case p{font-size:13.5px;color:var(--muted);margin-top:5px;font-weight:300}
+.case .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.case .tags span{font-size:10px;letter-spacing:.4px;color:var(--gold2);border:1px solid rgba(198,161,91,.35);border-radius:100px;padding:3px 9px}
+
+/* video reel */
+.reel{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:26px}
+.vid{position:relative;overflow:hidden;border:1px solid var(--line);background:#000}
+.vid video{width:100%;aspect-ratio:9/16;object-fit:cover}
+.vid .lab{position:absolute;left:0;right:0;bottom:0;padding:10px;background:linear-gradient(transparent,rgba(5,12,23,.9));font-size:11px;font-weight:600}
+.pulse{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--gold2);margin-right:6px;animation:pz 1.4s infinite}
+@keyframes pz{50%{opacity:.3;transform:scale(.7)}}
+
+/* journey */
+.jr{margin-top:24px;display:flex;flex-direction:column;gap:14px}
+.pf{display:flex;gap:14px;align-items:flex-start;border-left:2px solid var(--gold);padding:2px 0 2px 16px}
+.pf .yr{font-size:10.5px;color:var(--gold2);font-weight:700;letter-spacing:.5px;min-width:62px;padding-top:3px}
+.pf b{font-family:'Fraunces',serif;font-size:15px;display:block}
+.pf span{font-size:13px;color:var(--muted);font-weight:300}
+
+/* funnels */
+.links{margin-top:26px;display:flex;flex-direction:column;gap:12px}
+.ln{display:flex;align-items:center;gap:14px;background:rgba(244,239,230,.055);border:1px solid var(--line);padding:16px 18px;transition:.18s}
 .ln:hover,.ln:active{background:rgba(244,239,230,.1);transform:translateY(-2px);border-color:rgba(198,161,91,.5)}
-.ln .emo{font-size:21px;width:26px;text-align:center}
-.ln .t{flex:1}
-.ln .t b{font-family:'Fraunces',serif;font-size:16.5px;font-weight:600;display:block}
-.ln .t span{font-size:12.5px;color:var(--muted);font-weight:300}
-.ln .arr{color:var(--gold);font-size:17px}
-.ln.feat{background:linear-gradient(100deg,rgba(198,161,91,.18),rgba(231,178,62,.08));border-color:var(--gold)}
-.ln .price{font-size:11px;font-weight:700;color:var(--gold2);letter-spacing:.5px}
-
-.div{text-align:center;color:var(--muted);font-size:11px;letter-spacing:2px;text-transform:uppercase;margin:30px 0 16px;position:relative}
-.div::before,.div::after{content:"";position:absolute;top:50%;width:26%;height:1px;background:var(--line)}
-.div::before{left:0}.div::after{right:0}
+.ln .emo{font-size:20px;width:24px;text-align:center}
+.ln .t{flex:1}.ln .t b{font-family:'Fraunces',serif;font-size:16px;font-weight:600;display:block}
+.ln .t span{font-size:12px;color:var(--muted);font-weight:300}
+.ln .arr{color:var(--gold)}
+.ln .price{font-size:11px;font-weight:700;color:var(--gold2)}
+.ln.feat{background:linear-gradient(100deg,rgba(198,161,91,.2),rgba(231,178,62,.08));border-color:var(--gold);animation:halo 3s ease-in-out infinite}
+@keyframes halo{50%{box-shadow:0 0 26px -6px rgba(231,178,62,.5)}}
 
 /* socials */
-.socials{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
-.soc{width:46px;height:46px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;transition:.18s;background:rgba(244,239,230,.04)}
-.soc:hover{background:var(--gold);border-color:var(--gold);transform:translateY(-2px)}
-.soc:hover svg{fill:var(--midnight)}
-.soc svg{width:19px;height:19px;fill:var(--cream);transition:.18s}
+.div{text-align:center;color:var(--muted);font-size:11px;letter-spacing:2px;text-transform:uppercase;margin:16px 0}
+.socials{display:flex;justify-content:center;flex-wrap:wrap;gap:11px}
+.soc{width:44px;height:44px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;transition:.18s;background:rgba(244,239,230,.04)}
+.soc:hover{background:var(--gold);border-color:var(--gold);transform:translateY(-3px)}
+.soc:hover svg{fill:var(--midnight)}.soc svg{width:18px;height:18px;fill:var(--cream);transition:.18s}
 
-/* journey / proof */
-.journey{margin-top:40px}
-.journey h2{font-family:'Fraunces',serif;text-align:center;font-size:22px;font-weight:600;letter-spacing:.3px}
-.journey .sub{text-align:center;color:var(--muted);font-size:13px;margin-top:8px;font-weight:300}
-.proof{margin-top:22px;display:flex;flex-direction:column;gap:12px}
-.pf{display:flex;gap:14px;align-items:flex-start;border-left:2px solid var(--gold);padding:4px 0 4px 16px}
-.pf b{font-family:'Fraunces',serif;font-size:15px;color:var(--cream);display:block}
-.pf span{font-size:13px;color:var(--muted);font-weight:300}
-.pf .yr{font-size:11px;color:var(--gold2);font-weight:600;letter-spacing:.5px;min-width:52px;padding-top:3px}
-
-.foot{text-align:center;margin-top:40px;color:var(--muted);font-size:12px;letter-spacing:.3px}
-.foot .line{color:var(--gold2);font-family:'Fraunces',serif;font-style:italic;font-size:15px;margin-bottom:10px}
-.todo{background:rgba(231,178,62,.1);border:1px solid rgba(231,178,62,.35);color:var(--gold2);font-size:11.5px;padding:9px 14px;margin-top:22px;text-align:center;border-radius:4px}
+.foot{text-align:center;padding:36px 22px 46px;color:var(--muted);font-size:12px}
+.foot .line{color:var(--gold2);font-family:'Fraunces',serif;font-style:italic;font-size:17px;margin-bottom:10px}
+.todo{margin:22px 22px 0;background:rgba(231,178,62,.09);border:1px solid rgba(231,178,62,.3);color:var(--gold2);font-size:11px;padding:9px 13px;text-align:center;border-radius:4px}
 </style>
 </head>
 <body>
+<div class="glowbg"></div>
 <div class="page">
-  <div class="topband"></div>
 
   <!-- HERO -->
-  <div class="hero"><img src="media/dyrique-hero.jpg" alt="Dyrique Mendoza"></div>
-
-  <div class="id">
-    <h1>Dyrique Mendoza</h1>
-    <div class="tag">From the Block to the Boardroom</div>
-    <p class="bio">Entrepreneur, speaker &amp; brand builder helping the next generation <b>launch, build and fund</b> their businesses. Pick your direction 👇</p>
-  </div>
-
-  <div class="chips">
-    <span class="chip"><b>★</b> Featured on 7News</span>
-    <span class="chip"><b>★</b> Speaker</span>
-    <span class="chip"><b>★</b> Founder</span>
-    <span class="chip"><b>★</b> Brickell, Miami</span>
-  </div>
-
-  <!-- LINKS / FUNNELS -->
-  <div class="links">
-    <a class="ln feat" href="https://calendly.com/dyrique3/consultation" target="_blank" rel="noopener">
-      <span class="emo">📞</span><span class="t"><b>Book a Free 1-on-1 Call</b><span>Brand &amp; business — no pitch, just a plan</span></span><span class="arr">→</span>
-    </a>
-    <a class="ln" href="studio.html">
-      <span class="emo">🎥</span><span class="t"><b>Build Your Brand</b><span>Websites, videos &amp; content, done for you</span></span><span class="arr">→</span>
-    </a>
-    <a class="ln" href="index.html">
-      <span class="emo">🏛️</span><span class="t"><b>The Institution</b><span>Fundability &amp; business credit — main site</span></span><span class="arr">→</span>
-    </a>
-    <a class="ln" data-link="skool" href="#">
-      <span class="emo">🏫</span><span class="t"><b>The Club</b><span>35 Fundable Tasks + community</span></span><span class="price">$99/mo</span><span class="arr">→</span>
-    </a>
-    <a class="ln" href="https://calendly.com/dyrique3/consultation" target="_blank" rel="noopener">
-      <span class="emo">👑</span><span class="t"><b>1-on-1 Coaching</b><span>Private, hands-on — by application</span></span><span class="arr">→</span>
-    </a>
-    <a class="ln" href="fundable-tasks.html">
-      <span class="emo">📦</span><span class="t"><b>Digital Products</b><span>The 35 Tasks &amp; playbooks, self-paced</span></span><span class="arr">→</span>
-    </a>
-    <a class="ln" data-link="car-funnel" href="#">
-      <span class="emo">🚗</span><span class="t"><b>Get a Car</b><span>Need a ride? Let's get you connected</span></span><span class="arr">→</span>
-    </a>
-  </div>
-
-  <div class="div">Follow the journey</div>
-  <div class="socials">
-    <a class="soc" href="https://instagram.com/dyrique.mendoza" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.1.4.3 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.1-1 .3-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.1-.4-.3-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.1 1-.3 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.2A6.6 6.6 0 1012 18.6 6.6 6.6 0 0012 5.4zm0 10.9A4.3 4.3 0 1112 7.7a4.3 4.3 0 010 8.6zM18.9 5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></svg></a>
-    <a class="soc" href="https://youtube.com/@DyriqueMendoza" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 7.5a3 3 0 00-2.1-2.1C19 4.9 12 4.9 12 4.9s-7 0-8.9.5A3 3 0 001 7.5 31 31 0 00.5 12 31 31 0 001 16.5a3 3 0 002.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 002.1-2.1A31 31 0 0023.5 12 31 31 0 0023 7.5zM9.8 15.3V8.7l5.7 3.3z"/></svg></a>
-    <a class="soc" href="https://tiktok.com/@dyriquemendoza" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M16.5 3c.3 2.1 1.5 3.6 3.5 3.8V9c-1.3.1-2.5-.3-3.5-1v6.6c0 3.3-2.6 5.6-5.6 5.6A5.6 5.6 0 015.3 14a5.6 5.6 0 015.6-5.6c.3 0 .6 0 .9.1v2.6a3 3 0 00-.9-.1 3 3 0 103 3V3h2.6z"/></svg></a>
-    <a class="soc" href="https://linkedin.com/in/dyrique-mendoza-20547b241" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5A2.5 2.5 0 002.5 6a2.5 2.5 0 005 0 2.5 2.5 0 00-2.52-2.5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9z"/></svg></a>
-    <a class="soc" href="https://facebook.com/dyrique.mendoza.54" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.5V12h2.7l-.4 2.9h-2.3v7A10 10 0 0022 12z"/></svg></a>
-    <a class="soc" href="https://instagram.com/souljasteppin" target="_blank" rel="noopener" aria-label="SSK"><svg viewBox="0 0 24 24"><path d="M12 2l9 4.9v10.2L12 22l-9-4.9V6.9zm0 2.3L5 8.1v7.8l7 3.8 7-3.8V8.1z"/></svg></a>
-  </div>
-
-  <!-- THE JOURNEY -->
-  <div class="journey">
-    <h2>The Journey</h2>
-    <div class="sub">From reselling to stages to Brickell — the proof behind the brand.</div>
-    <div class="proof">
-      <div class="pf"><span class="yr">7NEWS</span><span><b>Featured on WSVN 7News</b><span>Quoted on Miami Gardens' youth entrepreneurship camp — real earned media.</span></span></div>
-      <div class="pf"><span class="yr">SPEAKER</span><span><b>Spoke at Norland &amp; youth events</b><span>On stages across Miami teaching young founders to build.</span></span></div>
-      <div class="pf"><span class="yr">FOUNDER</span><span><b>Built SSK from the ground up</b><span>From reselling clothes &amp; sneakers to a real streetwear brand.</span></span></div>
-      <div class="pf"><span class="yr">NOW</span><span><b>Dyrique Mendoza LLC · Brickell</b><span>An institution helping the next generation get launched &amp; fundable.</span></span></div>
+  <div class="hero">
+    <img src="media/dyrique-hero.jpg" alt="Dyrique Mendoza">
+    <div class="scrim"></div><div class="beam"></div>
+    <div class="htxt">
+      <div class="pre">This is</div>
+      <h1>Dyrique Mendoza</h1>
+      <div class="tl">From the <b>block</b> to the <b>boardroom</b></div>
     </div>
+    <div class="scrollcue">↓</div>
   </div>
 
-  <div class="todo">⚙️ To wire: Skool link ($99 Club) · Get-a-Car lead link · drop your real stage / Norland / SSK event photos into The Journey.</div>
+  <!-- STATS -->
+  <div class="stats">
+    <div class="st"><div class="num" data-count="5">0</div><div class="lab">K+ Community</div></div>
+    <div class="st"><div class="num" data-count="100">0</div><div class="lab">K+ Views</div></div>
+    <div class="st"><div class="num" data-count="3">0</div><div class="lab">Brands Built</div></div>
+    <div class="st"><div class="num" data-count="21">0</div><div class="lab">Years Old</div></div>
+  </div>
+
+  <!-- CASE STUDIES -->
+  <section>
+    <div class="eye rv">The Proof</div>
+    <div class="h2 rv d1">He's 21. And he builds <i>whole brands.</i></div>
+    <div class="sub rv d2">Not mockups — real, live businesses. Built end to end.</div>
+    <div class="cases">
+      <div class="case rv">
+        <div class="shot"><div class="badge">Live Brand</div><img src="media/case-raindrip.jpg" alt="Rain Drip"></div>
+        <div class="cb"><h3>Rain Drip LLC</h3><p>Built a full weather-essentials brand &amp; e-commerce store from zero — logo, site, subscription, the works.</p>
+          <div class="tags"><span>Website</span><span>Brand Identity</span><span>E-commerce</span></div></div>
+      </div>
+      <div class="case rv">
+        <div class="shot"><div class="badge">Live + Ads</div><img src="media/case-elev8.jpg" alt="Elev8tide"></div>
+        <div class="cb"><h3>ELEV8TIDE</h3><p>Branded a wellness company — live site, funnel, cinematic video ads and scroll-stopping UGC content.</p>
+          <div class="tags"><span>Website</span><span>Video Ads</span><span>UGC</span><span>Funnel</span></div></div>
+      </div>
+      <div class="case rv">
+        <div class="shot"><div class="badge">The Institution</div><img src="media/case-dm.jpg" alt="Dyrique Mendoza LLC"></div>
+        <div class="cb"><h3>Dyrique Mendoza LLC</h3><p>His own firm — a business-credit &amp; fundability institution for the next generation, out of Brickell.</p>
+          <div class="tags"><span>Brand</span><span>Content</span><span>Authority</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO REEL -->
+  <section style="padding-top:8px">
+    <div class="eye rv">Wait… he makes these too?</div>
+    <div class="h2 rv d1">Yeah. <i>These.</i></div>
+    <div class="sub rv d2"><span class="pulse"></span>Real AI-crafted brand video — the level most brands pay thousands for.</div>
+    <div class="reel">
+      <div class="vid rv"><video src="media/work-ad.mp4" poster="media/work-ad.jpg" autoplay muted loop playsinline></video><div class="lab">Cinematic Ad</div></div>
+      <div class="vid rv d1"><video src="media/work-ugc.mp4" poster="media/work-ugc.jpg" autoplay muted loop playsinline></video><div class="lab">Creator / UGC</div></div>
+      <div class="vid rv"><video src="media/work-packshot.mp4" poster="media/work-packshot.jpg" autoplay muted loop playsinline></video><div class="lab">Product Film</div></div>
+      <div class="vid rv d1"><video src="media/work-reel.mp4" poster="media/work-reel.jpg" autoplay muted loop playsinline></video><div class="lab">Social Reel</div></div>
+    </div>
+  </section>
+
+  <!-- JOURNEY -->
+  <section style="padding-top:8px">
+    <div class="eye rv">The Come-Up</div>
+    <div class="h2 rv d1">From reselling to <i>stages.</i></div>
+    <div class="jr">
+      <div class="pf rv"><span class="yr">7NEWS</span><span><b>Featured on WSVN 7News</b><span>Quoted on Miami Gardens' youth entrepreneurship camp.</span></span></div>
+      <div class="pf rv d1"><span class="yr">SPEAKER</span><span><b>Spoke at Norland &amp; youth events</b><span>On stages across Miami teaching young founders to build.</span></span></div>
+      <div class="pf rv d2"><span class="yr">FOUNDER</span><span><b>Built SSK from scratch</b><span>Reselling clothes &amp; sneakers → a real streetwear brand.</span></span></div>
+      <div class="pf rv d3"><span class="yr">NOW</span><span><b>Brickell · Dyrique Mendoza LLC</b><span>Helping the next generation launch &amp; get fundable.</span></span></div>
+    </div>
+  </section>
+
+  <!-- FUNNELS -->
+  <section style="padding-top:8px">
+    <div class="eye rv">This is what we do</div>
+    <div class="h2 rv d1">Pick your <i>direction.</i> 👇</div>
+    <div class="links">
+      <a class="ln feat rv" href="https://calendly.com/dyrique3/consultation" target="_blank" rel="noopener"><span class="emo">📞</span><span class="t"><b>Book a Free 1-on-1 Call</b><span>Brand &amp; business — no pitch, just a plan</span></span><span class="arr">→</span></a>
+      <a class="ln rv" href="studio.html"><span class="emo">🎥</span><span class="t"><b>Build Your Brand</b><span>Sites, videos &amp; content, done for you</span></span><span class="arr">→</span></a>
+      <a class="ln rv" href="index.html"><span class="emo">🏛️</span><span class="t"><b>The Institution</b><span>Fundability &amp; business credit</span></span><span class="arr">→</span></a>
+      <a class="ln rv" data-link="skool" href="#"><span class="emo">🏫</span><span class="t"><b>The Club</b><span>35 Fundable Tasks + community</span></span><span class="price">$99/mo</span><span class="arr">→</span></a>
+      <a class="ln rv" href="https://calendly.com/dyrique3/consultation" target="_blank" rel="noopener"><span class="emo">👑</span><span class="t"><b>1-on-1 Coaching</b><span>Private, hands-on — by application</span></span><span class="arr">→</span></a>
+      <a class="ln rv" href="fundable-tasks.html"><span class="emo">📦</span><span class="t"><b>Digital Products</b><span>The 35 Tasks, self-paced</span></span><span class="arr">→</span></a>
+      <a class="ln rv" data-link="car-funnel" href="#"><span class="emo">🚗</span><span class="t"><b>Get a Car</b><span>Need a ride? Let's get you connected</span></span><span class="arr">→</span></a>
+    </div>
+    <div class="div">Follow the journey</div>
+    <div class="socials rv">
+      <a class="soc" href="https://instagram.com/dyrique.mendoza" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.1.4.3 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.1-1 .3-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.1-.4-.3-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.1 1-.3 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.2A6.6 6.6 0 1012 18.6 6.6 6.6 0 0012 5.4zm0 10.9A4.3 4.3 0 1112 7.7a4.3 4.3 0 010 8.6zM18.9 5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></svg></a>
+      <a class="soc" href="https://youtube.com/@DyriqueMendoza" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23 7.5a3 3 0 00-2.1-2.1C19 4.9 12 4.9 12 4.9s-7 0-8.9.5A3 3 0 001 7.5 31 31 0 00.5 12 31 31 0 001 16.5a3 3 0 002.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 002.1-2.1A31 31 0 0023.5 12 31 31 0 0023 7.5zM9.8 15.3V8.7l5.7 3.3z"/></svg></a>
+      <a class="soc" href="https://tiktok.com/@dyriquemendoza" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M16.5 3c.3 2.1 1.5 3.6 3.5 3.8V9c-1.3.1-2.5-.3-3.5-1v6.6c0 3.3-2.6 5.6-5.6 5.6A5.6 5.6 0 015.3 14a5.6 5.6 0 015.6-5.6c.3 0 .6 0 .9.1v2.6a3 3 0 00-.9-.1 3 3 0 103 3V3h2.6z"/></svg></a>
+      <a class="soc" href="https://linkedin.com/in/dyrique-mendoza-20547b241" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5A2.5 2.5 0 002.5 6a2.5 2.5 0 005 0 2.5 2.5 0 00-2.52-2.5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9z"/></svg></a>
+      <a class="soc" href="https://instagram.com/souljasteppin" target="_blank" rel="noopener" aria-label="SSK"><svg viewBox="0 0 24 24"><path d="M12 2l9 4.9v10.2L12 22l-9-4.9V6.9zm0 2.3L5 8.1v7.8l7 3.8 7-3.8V8.1z"/></svg></a>
+    </div>
+  </section>
+
+  <div class="todo">⚙️ To finish: Skool $99 link · Get-a-Car link · drop your real stage / Norland / SSK photos into The Come-Up + more case studies.</div>
 
   <div class="foot">
     <div class="line">"From the block to the boardroom."</div>
     © 2026 Dyrique Mendoza LLC · Brickell, Miami
   </div>
 </div>
+
+<script>
+(function(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.14});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+  // count-up stats
+  var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;cio.unobserve(e.target);
+    var el=e.target,end=+el.dataset.count,t0=null;
+    function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/1100,1);el.textContent=Math.round((1-Math.pow(1-p,3))*end);if(p<1)requestAnimationFrame(step);}
+    requestAnimationFrame(step);});},{threshold:.5});
+  document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el);});
+})();
+</script>
 </body>
 </html>
